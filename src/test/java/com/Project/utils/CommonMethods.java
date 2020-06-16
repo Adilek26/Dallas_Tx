@@ -15,11 +15,13 @@ import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.Project.testbase.BaseClass;
 import com.Project.testbase.PageInitializer;
 
 
@@ -287,5 +289,10 @@ public class CommonMethods extends PageInitializer{
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	public static void AcClick(WebElement element) {
+		Actions act=new Actions(BaseClass.driver);
+		act.moveToElement(element).build().perform();
+		
 	}
 }

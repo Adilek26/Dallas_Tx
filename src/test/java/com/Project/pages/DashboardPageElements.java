@@ -31,8 +31,8 @@ public class DashboardPageElements extends CommonMethods{
       @FindBy(xpath="//div[@class='menu']/ul/li")
   	public List<WebElement> dashMenu;
       
-      @FindBy(id = "menu_core_viewDefinedPredefinedReports")
-  	public WebElement reports;
+      @FindBy(id = "menu_pim_viewEmployeeList")
+  	public WebElement eList;
       
      
       public DashboardPageElements() {
@@ -43,9 +43,9 @@ public class DashboardPageElements extends CommonMethods{
     	  jsClick(addEmployee);
       }
       
-      public void navigateToReports() {
+      public void navigateToEmployeeList() {
     	  jsClick(Pim);
-    	  jsClick(reports);
+    	  jsClick(eList);
       }
       
 }
